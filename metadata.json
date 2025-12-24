@@ -1,7 +1,5 @@
 {
   "name": "أقود بنور القرآن - Quran Leadership Program",
-  "description": "An interactive leadership development platform based on Quranic principles, featuring tiered training levels, progress tracking, and an AI-powered Quranic mentor.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "description": "An interactive leadership development platform based on Quranic principles, featuring tiered training levels, progress tracking, and a comprehensive resource library.",
+  "requestFramePermissions": []
 }

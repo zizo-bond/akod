@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Users, Award, CheckCircle, Lock, Play, 
   FileText, MessageCircle, Calendar, Star, TrendingUp, 
-  ArrowLeft, BrainCircuit, ShieldCheck, Zap
+  ArrowLeft, BrainCircuit, ShieldCheck, Zap, Library
 } from 'lucide-react';
 import { TabType, UserProgress } from './types';
 import { LEVELS, FEATURES, STATISTICS } from './constants';
-import GeminiMentor from './components/GeminiMentor';
+import LeadershipLibrary from './components/LeadershipLibrary';
 import EnrollmentModal from './components/EnrollmentModal';
 
 const App: React.FC = () => {
@@ -69,7 +69,7 @@ const App: React.FC = () => {
               { id: 'overview', label: 'نظرة عامة', icon: BookOpen },
               { id: 'levels', label: 'المستويات', icon: Star },
               { id: 'assessment', label: 'التقييم والشهادة', icon: Award },
-              { id: 'mentor', label: 'المستشار الرقمي', icon: BrainCircuit }
+              { id: 'resources', label: 'مكتبة القيادة', icon: Library }
             ].map(tab => (
               <button
                 key={tab.id}
@@ -373,13 +373,13 @@ const App: React.FC = () => {
           </div>
         )}
 
-        {activeTab === 'mentor' && (
+        {activeTab === 'resources' && (
           <div className="animate-in fade-in zoom-in-95 duration-700">
             <div className="text-center mb-12 space-y-4">
-              <h2 className="text-4xl font-bold">المستشار القيادي الذكي</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">تواصل مع مساعدك الرقمي المدعم بذكاء اصطناعي متخصص في استنباط الحلول القيادية من آيات القرآن الكريم.</p>
+              <h2 className="text-4xl font-bold">مكتبة القيادة</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">استكشف المبادئ والأسس القيادية التي أرساها القرآن الكريم، والمصنفة حسب مجالات التأثير المختلفة.</p>
             </div>
-            <GeminiMentor />
+            <LeadershipLibrary />
           </div>
         )}
       </main>
